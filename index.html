@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Power Solarwaves | Professional Solar Engineering Bareilly</title>
     
     <script src="https://cdn.tailwindcss.com"></script>
@@ -14,250 +14,242 @@
 
     <style>
         :root { --brand-red: #cc0000; --dark: #111111; }
-        body { font-family: 'Outfit', sans-serif; overflow-x: hidden; background-color: #ffffff; }
-        h1, h2, h3, .font-heading { font-family: 'Montserrat', sans-serif; text-transform: uppercase; letter-spacing: -1px; }
+        body { font-family: 'Outfit', sans-serif; overflow-x: hidden; background-color: #ffffff; width: 100%; }
+        h1, h2, h3 { font-family: 'Montserrat', sans-serif; text-transform: uppercase; letter-spacing: -1px; }
         .text-brand-red { color: var(--brand-red); }
         .bg-brand-red { background-color: var(--brand-red); }
-        .hover-card { transition: all 0.4s ease; border: 1px solid #eee; }
-        .hover-card:hover { transform: translateY(-10px); border-color: var(--brand-red); box-shadow: 0 20px 40px rgba(204,0,0,0.1); }
-        .nav-blur { backdrop-filter: blur(15px); background: rgba(255, 255, 255, 0.9); }
-        input[type=range] { accent-color: var(--brand-red); }
+        
+        /* Mobile Specific Adjustments */
+        @media (max-width: 768px) {
+            .mobile-padding { padding-left: 1.5rem; padding-right: 1.5rem; }
+            h1 { font-size: 3rem !important; line-height: 1 !important; }
+            .hero-img { height: 350px !important; }
+        }
+
+        .hover-card { transition: all 0.3s ease; border: 1px solid #eee; }
+        .nav-blur { backdrop-filter: blur(15px); background: rgba(255, 255, 255, 0.95); }
+        input[type=range] { accent-color: var(--brand-red); height: 8px; }
     </style>
 </head>
-<body>
+<body class="antialiased">
 
-    <!-- Announcement -->
-    <div class="bg-black text-white py-2 text-center text-[10px] font-bold tracking-[0.3em] uppercase px-4">
-        ⚡ Power Solarwaves: Professional Solar Infrastructure by Power Batteries (Est. 2002) ⚡
+    <!-- Mobile-Ready Announcement -->
+    <div class="bg-black text-white py-2 text-center text-[9px] md:text-[10px] font-bold tracking-[0.2em] uppercase px-4">
+        ⚡ Power Solarwaves: Solar Infrastructure by Power Batteries (Est. 2002) ⚡
     </div>
 
-    <!-- Navigation -->
+    <!-- Responsive Navigation -->
     <nav class="sticky top-0 z-[100] nav-blur border-b border-gray-100">
-        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+        <div class="max-w-7xl mx-auto px-4 md:px-6 h-16 md:h-20 flex justify-between items-center">
             <div class="flex flex-col">
-                <span class="text-2xl font-black text-black leading-none uppercase tracking-tighter">POWER <span class="text-brand-red">SOLARWAVES</span></span>
-                <span class="text-[9px] font-bold text-gray-400 tracking-[0.2em] uppercase mt-1">Energy Solutions Since 2002</span>
+                <span class="text-lg md:text-2xl font-black text-black leading-none uppercase tracking-tighter">POWER <span class="text-brand-red">SOLARWAVES</span></span>
+                <span class="text-[7px] md:text-[9px] font-bold text-gray-400 tracking-[0.2em] uppercase mt-1">Energy Solutions Since 2002</span>
             </div>
-            <div class="hidden lg:flex space-x-8 text-xs font-bold uppercase tracking-widest text-gray-600">
-                <a href="#home" class="hover:text-brand-red transition">Solutions</a>
-                <a href="#calculator" class="hover:text-brand-red transition">Analysis</a>
-                <a href="#tech" class="hover:text-brand-red transition">Technology</a>
-                <a href="#installations" class="hover:text-brand-red transition">Portfolio</a>
-            </div>
-            <a href="https://wa.me/918006600800" class="bg-brand-red text-white px-7 py-3 rounded-full text-xs font-black shadow-xl hover:bg-black transition-all uppercase">Consult Expert</a>
+            <a href="https://wa.me/918006600800" class="bg-brand-red text-white px-4 md:px-7 py-2 md:py-3 rounded-full text-[10px] md:text-xs font-black shadow-lg hover:bg-black transition-all uppercase">Chat Now</a>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="relative pt-16 pb-24 px-6 bg-slate-50">
-        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
-            <div data-aos="fade-right">
-                <span class="inline-block bg-red-100 text-brand-red px-4 py-1 rounded-full text-[10px] font-black uppercase mb-6 tracking-widest">Authorized System Integrators</span>
-                <h1 class="text-6xl lg:text-8xl font-black text-black leading-[0.9] mb-8 uppercase">
-                    Engineered for <br><span class="text-brand-red underline decoration-8 decoration-red-100 underline-offset-8">Efficiency.</span>
+    <section id="home" class="relative pt-8 md:pt-16 pb-12 md:pb-24 bg-slate-50 overflow-hidden">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-16 items-center mobile-padding">
+            <div data-aos="fade-up">
+                <span class="inline-block bg-red-100 text-brand-red px-3 py-1 rounded-full text-[9px] font-black uppercase mb-4 tracking-widest">Authorized Integrators</span>
+                <h1 class="text-5xl md:text-7xl lg:text-8xl font-black text-black leading-tight mb-6 uppercase">
+                    Engineered <br><span class="text-brand-red underline decoration-4 md:decoration-8 decoration-red-100 underline-offset-4 md:underline-offset-8">Efficiency.</span>
                 </h1>
-                <p class="text-lg text-gray-600 mb-10 max-w-md font-normal leading-relaxed">
-                    Power Solarwaves provides end-to-end rooftop solar infrastructure in Bareilly. Leveraging 22 years of energy expertise from <strong>Power Batteries</strong>, we manage the full project lifecycle with technical precision and a focus on long-term ROI.
+                <p class="text-base md:text-lg text-gray-600 mb-8 max-w-md font-normal leading-relaxed">
+                    Power Solarwaves provides technical rooftop solar infrastructure in Bareilly. Leveraging 22 years of expertise from <strong>Power Batteries</strong>, we manage full project lifecycles including site survey, net-metering, and <strong>₹1,08,000 subsidy</strong> realization.
                 </p>
-                <div class="flex flex-wrap gap-5">
-                    <a href="#calculator" class="bg-brand-red text-white px-10 py-5 rounded-2xl font-black text-sm uppercase tracking-widest hover:bg-black transition-all shadow-2xl">Financial Analysis</a>
-                    <a href="#subsidy" class="bg-white border-2 border-gray-200 px-10 py-5 rounded-2xl font-black text-sm uppercase tracking-widest hover:border-brand-red transition-all">Subsidy Realization</a>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#calculator" class="bg-brand-red text-white text-center px-8 py-4 rounded-xl font-black text-xs uppercase tracking-widest shadow-xl">ROI Analysis</a>
+                    <a href="#tech" class="bg-white border-2 border-gray-200 text-center px-8 py-4 rounded-xl font-black text-xs uppercase tracking-widest text-gray-400">Technology</a>
                 </div>
             </div>
-            <div class="relative" data-aos="zoom-in">
-                <img src="https://images.unsplash.com/photo-1613665813446-82a78c468a1d?q=80&w=1200" class="rounded-[3rem] shadow-2xl h-[550px] w-full object-cover grayscale hover:grayscale-0 transition duration-700" alt="Solar Infrastructure">
-                <div class="absolute -bottom-8 -left-8 bg-white p-10 rounded-[2rem] shadow-2xl border border-gray-50">
-                    <p class="text-5xl font-black text-brand-red italic leading-none uppercase tracking-tighter">₹1.08L</p>
-                    <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mt-3">Maximum Combined Subsidy</p>
+            <div class="relative mt-8 lg:mt-0" data-aos="zoom-in">
+                <img src="https://images.unsplash.com/photo-1613665813446-82a78c468a1d?q=80&w=1200" class="rounded-[2rem] md:rounded-[3rem] shadow-2xl h-[300px] md:h-[550px] w-full object-cover grayscale hover:grayscale-0 transition duration-700 hero-img" alt="Solar Project">
+                <div class="absolute -bottom-4 -right-2 md:-bottom-8 md:-right-8 bg-white p-6 md:p-10 rounded-2xl md:rounded-[2rem] shadow-2xl border border-gray-50">
+                    <p class="text-3xl md:text-5xl font-black text-brand-red italic leading-none uppercase tracking-tighter">₹1.08L</p>
+                    <p class="text-[8px] md:text-[10px] font-bold text-gray-400 uppercase tracking-widest mt-2 md:mt-3 tracking-tighter">Combined Subsidy</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Tech Wall -->
-    <section class="py-16 bg-white border-y border-gray-100">
-        <div class="max-w-7xl mx-auto px-6 text-center">
-            <h3 class="text-[10px] font-black text-gray-300 uppercase tracking-[0.5em] mb-12 italic">Tier-1 Module Partners</h3>
-            <div class="grid grid-cols-2 md:grid-cols-5 gap-8 items-center opacity-40 grayscale hover:grayscale-0 transition duration-500">
-                <span class="text-xl font-black italic tracking-tighter">WAAREE</span>
-                <span class="text-xl font-black italic tracking-tighter text-blue-800">TATA POWER</span>
-                <span class="text-xl font-black italic tracking-tighter text-blue-900">ADANI</span>
-                <span class="text-xl font-black italic tracking-tighter text-red-600">VIKRAM</span>
-                <span class="text-xl font-black italic tracking-tighter">SAATVIK</span>
+    <!-- Brands Wall -->
+    <section class="py-10 md:py-16 bg-white border-y border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 md:px-6 text-center">
+            <h3 class="text-[8px] md:text-[10px] font-black text-gray-300 uppercase tracking-[0.3em] mb-8 md:mb-12 italic">Tier-1 Technology Partners</h3>
+            <div class="grid grid-cols-3 md:grid-cols-5 gap-4 md:gap-8 items-center opacity-40 grayscale">
+                <span class="text-[10px] md:text-xl font-black italic">WAAREE</span>
+                <span class="text-[10px] md:text-xl font-black italic text-blue-800">TATA</span>
+                <span class="text-[10px] md:text-xl font-black italic text-blue-900">ADANI</span>
+                <span class="text-[10px] md:text-xl font-black italic text-red-600">VIKRAM</span>
+                <span class="text-[10px] md:text-xl font-black italic">SAATVIK</span>
             </div>
         </div>
     </section>
 
-    <!-- Technology Portfolio Section -->
-    <section id="tech" class="py-24 px-6 bg-white">
+    <!-- Technology Section -->
+    <section id="tech" class="py-16 md:py-24 bg-white mobile-padding">
+        <div class="max-w-7xl mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-black mb-12 italic uppercase tracking-tighter">Advanced <span class="text-brand-red">Modules</span></h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+                <div class="p-8 bg-slate-50 rounded-[2rem] md:rounded-[2.5rem] border border-slate-100 hover-card text-left" data-aos="fade-up">
+                    <h3 class="text-lg font-bold mb-3 uppercase">Bifacial DCR</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed font-light">Engineered to generate power from both sides, increasing yield by up to 25% for high-reflectance rooftops.</p>
+                </div>
+                <div class="p-8 bg-slate-50 rounded-[2rem] md:rounded-[2.5rem] border border-slate-100 hover-card text-left" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="text-lg font-bold mb-3 uppercase">N-Type TopCon</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed font-light">Highest cells efficiency available. Superior low-light performance with a 30-year technical lifecycle.</p>
+                </div>
+                <div class="p-8 bg-slate-50 rounded-[2rem] md:rounded-[2.5rem] border border-slate-100 hover-card text-left" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="text-lg font-bold mb-3 uppercase">Mono PERC</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed font-light">Advanced half-cell technology reduces internal resistance. Optimized for urban rooftops with shadow constraints.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Calculator -->
+    <section id="calculator" class="py-16 md:py-24 bg-black text-white mobile-padding">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-10 md:mb-16">
+                <h2 class="text-3xl md:text-4xl font-black italic text-brand-red uppercase">Yield Estimator</h2>
+                <p class="text-gray-400 mt-2 text-xs md:text-sm italic">Projected ROI based on Tuli Energy Group Data.</p>
+            </div>
+            <div class="bg-zinc-900 p-6 md:p-10 rounded-[2rem] md:rounded-[3rem] border border-zinc-800 shadow-2xl">
+                <div class="mb-10 text-center">
+                    <p class="text-[9px] md:text-[10px] font-black text-gray-500 uppercase tracking-widest mb-4">Monthly Bill Amount</p>
+                    <p class="text-4xl md:text-5xl font-black text-white mb-6 tracking-tighter italic">₹<span id="bill-value">5000</span></p>
+                    <input type="range" min="1000" max="20000" value="5000" class="w-full h-2 bg-zinc-800 rounded-lg appearance-none cursor-pointer" id="bill-range">
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center border-t border-zinc-800 pt-8 uppercase font-black">
+                    <div class="flex flex-col items-center">
+                        <p class="text-[8px] md:text-[9px] text-gray-500 tracking-widest mb-1 italic">Capacity</p>
+                        <p class="text-xl md:text-2xl text-white italic" id="sys-size">3kW</p>
+                    </div>
+                    <div class="flex flex-col items-center border-y md:border-y-0 md:border-x border-zinc-800 py-4 md:py-0">
+                        <p class="text-[8px] md:text-[9px] text-gray-500 tracking-widest mb-1 italic">Subsidy</p>
+                        <p class="text-xl md:text-2xl text-green-500 italic" id="subsidy-val">₹1,08,000</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <p class="text-[8px] md:text-[9px] text-gray-500 tracking-widest mb-1 italic">25-Year Value</p>
+                        <p class="text-3xl md:text-4xl text-brand-red italic" id="total-savings">₹12.5L</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Turn-Key Methodology -->
+    <section id="subsidy" class="py-16 md:py-24 bg-slate-50 mobile-padding">
         <div class="max-w-7xl mx-auto">
-            <h2 class="text-center text-4xl font-black mb-16 italic uppercase tracking-tighter">Advanced <span class="text-brand-red">Module</span> Technologies</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Bifacial -->
-                <div class="p-8 bg-slate-50 rounded-[2.5rem] border border-slate-100 hover-card" data-aos="fade-up">
-                    <p class="text-brand-red font-black text-[10px] uppercase tracking-widest mb-4 italic">The Industry Standard</p>
-                    <h3 class="text-xl font-bold mb-4 uppercase">Bifacial DCR Modules</h3>
-                    <p class="text-gray-500 text-sm leading-relaxed font-light">Engineered to generate power from both sides, increasing yield by up to 25% compared to conventional panels. Optimized for Bareilly's high-reflectance rooftops.</p>
-                </div>
-                <!-- N-Type TopCon -->
-                <div class="p-8 bg-slate-50 rounded-[2.5rem] border border-slate-100 hover-card" data-aos="fade-up" data-aos-delay="100">
-                    <p class="text-brand-red font-black text-[10px] uppercase tracking-widest mb-4 italic">Latest Innovation</p>
-                    <h3 class="text-xl font-bold mb-4 uppercase">N-Type TopCon Tech</h3>
-                    <p class="text-gray-500 text-sm leading-relaxed font-light">The highest efficiency cells available at retail. Feature superior low-light performance and the lowest degradation rates in the market (30-year lifecycle).</p>
-                </div>
-                <!-- Mono PERC Half-Cut -->
-                <div class="p-8 bg-slate-50 rounded-[2.5rem] border border-slate-100 hover-card" data-aos="fade-up" data-aos-delay="200">
-                    <p class="text-brand-red font-black text-[10px] uppercase tracking-widest mb-4 italic">Reliable Performance</p>
-                    <h3 class="text-xl font-bold mb-4 uppercase">Mono PERC Half-Cut</h3>
-                    <p class="text-gray-500 text-sm leading-relaxed font-light">Advanced half-cell design reduces internal resistance and shading losses. Ideal for urban rooftops with partial shadow obstructions.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Interactive Analysis -->
-    <section id="calculator" class="py-24 px-6 bg-black text-white">
-        <div class="max-w-5xl mx-auto">
-            <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-4xl font-black italic text-brand-red uppercase tracking-tighter">Solar Yield Estimator</h2>
-                <p class="text-gray-400 mt-4 font-light tracking-wide italic">Projected ROI based on Tuli Energy Group benchmark data.</p>
-            </div>
-            <div class="bg-zinc-900 p-10 rounded-[3rem] border border-zinc-800 shadow-2xl">
-                <div class="mb-12 text-center">
-                    <p class="text-[10px] font-black text-gray-500 uppercase tracking-widest mb-4 tracking-[0.2em]">Monthly Consumption Bill</p>
-                    <p class="text-5xl font-black text-white mb-6 tracking-tighter italic font-heading">₹<span id="bill-value">5000</span></p>
-                    <input type="range" min="1000" max="20000" value="5000" class="w-full max-w-lg h-2 bg-zinc-800 rounded-lg appearance-none cursor-pointer" id="bill-range">
-                </div>
-                <div class="grid md:grid-cols-3 gap-10 text-center border-t border-zinc-800 pt-10 uppercase font-black">
-                    <div>
-                        <p class="text-[9px] text-gray-500 tracking-widest mb-2 italic">Recommended Capacity</p>
-                        <p class="text-2xl text-white italic" id="sys-size">3kW</p>
-                    </div>
-                    <div>
-                        <p class="text-[9px] text-gray-500 tracking-widest mb-2 italic">Govt. Benefit</p>
-                        <p class="text-2xl text-green-500 italic" id="subsidy-val">₹1,08,000</p>
-                    </div>
-                    <div>
-                        <p class="text-[9px] text-gray-500 tracking-widest mb-2 italic">25-Year Value</p>
-                        <p class="text-4xl text-brand-red italic" id="total-savings">₹12.5L</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Project Methodology -->
-    <section id="subsidy" class="py-24 px-6 bg-slate-50">
-        <div class="max-w-7xl mx-auto">
-            <h2 class="text-center text-4xl font-black mb-16 italic uppercase tracking-tighter">Turn-Key <span class="text-brand-red">Methodology</span></h2>
-            <div class="grid md:grid-cols-2 gap-10">
-                <div class="bg-white p-12 rounded-[3rem] hover-card" data-aos="fade-up">
-                    <h3 class="text-2xl font-black mb-6 text-brand-red italic uppercase tracking-tight underline">Infrastructure Setup</h3>
-                    <p class="text-gray-500 text-sm leading-relaxed mb-8 font-normal">Our technical team manages every phase of the transition: National Portal registration, UPPCL technical feasibility analysis, structure engineering, and net-meter commissioning to ensure subsidy realization.</p>
-                    <ul class="text-[10px] font-bold space-y-3 text-gray-400 uppercase tracking-widest italic">
-                        <li><i class="fas fa-microscope text-brand-red mr-2"></i> Technical Site Survey</li>
-                        <li><i class="fas fa-file-signature text-brand-red mr-2"></i> Liasioning with DISCOM</li>
-                        <li><i class="fas fa-chart-line text-brand-red mr-2"></i> Subsidy Compliance</li>
+            <h2 class="text-center text-3xl md:text-4xl font-black mb-12 italic uppercase tracking-tighter text-black">Turn-Key <span class="text-brand-red">Methodology</span></h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
+                <div class="bg-white p-8 md:p-12 rounded-[2rem] md:rounded-[3rem] hover-card" data-aos="fade-up">
+                    <h3 class="text-xl md:text-2xl font-black mb-4 text-brand-red italic uppercase underline decoration-2 underline-offset-4">Engineering</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-6">Our team manages every phase: National Portal registration, UPPCL technical analysis, structure engineering, and net-meter commissioning for subsidy realization.</p>
+                    <ul class="text-[9px] font-bold space-y-2 text-gray-400 uppercase tracking-widest italic">
+                        <li><i class="fas fa-check text-brand-red mr-2"></i> Site Survey</li>
+                        <li><i class="fas fa-check text-brand-red mr-2"></i> DISCOM Approval</li>
+                        <li><i class="fas fa-check text-brand-red mr-2"></i> Net Metering</li>
                     </ul>
                 </div>
-                <div class="bg-black text-white p-12 rounded-[3rem] hover-card" data-aos="fade-up" data-aos-delay="100">
-                    <h3 class="text-2xl font-black mb-6 text-brand-red italic uppercase tracking-tight underline">Financial Engineering</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed mb-8 font-normal">Optimizing project economics through competitive financing. Strategic partnerships with SBI, Canara Bank, and HDFC provide rooftop solar loans starting at 7.25% interest.</p>
-                    <ul class="text-[10px] font-bold space-y-3 text-gray-600 uppercase tracking-widest italic">
-                        <li><i class="fas fa-percentage text-brand-red mr-2"></i> 7.25% Base ROI</li>
-                        <li><i class="fas fa-calendar-check text-brand-red mr-2"></i> 120-Month Tenure</li>
-                        <li><i class="fas fa-shield-alt text-brand-red mr-2"></i> zero Downpayment Options</li>
+                <div class="bg-black text-white p-8 md:p-12 rounded-[2rem] md:rounded-[3rem] hover-card" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="text-xl md:text-2xl font-black mb-4 text-brand-red italic uppercase underline decoration-2 underline-offset-4">Financing</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">Strategic partnerships with SBI, Canara Bank, and HDFC provide rooftop solar loans starting at 7.25% interest, paid via monthly bill savings.</p>
+                    <ul class="text-[9px] font-bold space-y-2 text-gray-600 uppercase tracking-widest italic">
+                        <li><i class="fas fa-check text-brand-red mr-2"></i> 7.25% ROI</li>
+                        <li><i class="fas fa-check text-brand-red mr-2"></i> 120-Month Tenure</li>
+                        <li><i class="fas fa-check text-brand-red mr-2"></i> Low Downpayment</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Installations -->
-    <section id="installations" class="py-24 bg-white px-6">
+    <!-- Installations & Testimonials -->
+    <section id="installations" class="py-16 md:py-24 bg-white mobile-padding">
         <div class="max-w-7xl mx-auto">
-            <h2 class="text-center text-4xl font-black mb-20 italic">Recent <span class="text-brand-red uppercase tracking-tighter">Installations</span></h2>
-            <div class="grid lg:grid-cols-2 gap-12 items-start">
-                
-                <div class="rounded-[2.5rem] overflow-hidden shadow-2xl h-[500px]" data-aos="zoom-in">
-                    <img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?q=80&w=800" class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-700" alt="Solar Engineering Project">
+            <h2 class="text-center text-3xl md:text-4xl font-black mb-12 md:mb-20 italic">Recent <span class="text-brand-red uppercase">Projects</span></h2>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-start">
+                <div class="rounded-[2rem] md:rounded-[2.5rem] overflow-hidden shadow-2xl h-[300px] md:h-[500px]" data-aos="zoom-in">
+                    <img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?q=80&w=800" class="w-full h-full object-cover grayscale" alt="Project">
                 </div>
-
-                <div class="grid sm:grid-cols-2 gap-6">
-                    <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100 shadow-sm hover:border-brand-red transition" data-aos="fade-up">
-                        <p class="text-sm text-gray-600 mb-6 font-medium leading-relaxed italic">"Transparent project execution. The technical team optimized our roof space for maximum yield and managed the entire UPPCL process."</p>
-                        <p class="font-black text-[10px] uppercase tracking-widest text-black">— Ramesh Agarwal, Civil Lines</p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
+                    <div class="bg-slate-50 p-6 md:p-8 rounded-[1.5rem] md:rounded-3xl border border-slate-100 italic" data-aos="fade-up">
+                        <p class="text-xs md:text-sm text-gray-600 mb-4 leading-relaxed italic">"Transparent execution. Technical team managed the entire UPPCL process for our home."</p>
+                        <p class="font-black text-[9px] uppercase tracking-widest text-black">— Ramesh Agarwal, Civil Lines</p>
                     </div>
-                    <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100 shadow-sm hover:border-brand-red transition" data-aos="fade-up" data-aos-delay="100">
-                        <p class="text-sm text-gray-600 mb-6 font-medium leading-relaxed italic">"Exceptional structural engineering. The high-raise structure is robust and the after-sales support is very professional."</p>
-                        <p class="font-black text-[10px] uppercase tracking-widest text-black">— Mohd. Arif, Izzat Nagar</p>
+                    <div class="bg-slate-50 p-6 md:p-8 rounded-[1.5rem] md:rounded-3xl border border-slate-100 italic" data-aos="fade-up" data-aos-delay="100">
+                        <p class="text-xs md:text-sm text-gray-600 mb-4 leading-relaxed italic">"Robust structural engineering and very professional after-sales support."</p>
+                        <p class="font-black text-[9px] uppercase tracking-widest text-black">— Mohd. Arif, Izzat Nagar</p>
                     </div>
-                    <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100 shadow-sm hover:border-brand-red transition" data-aos="fade-up" data-aos-delay="200">
-                        <p class="text-sm text-gray-600 mb-6 font-medium leading-relaxed italic">"Highly satisfied with the documentation support. Subsidy was credited exactly as projected within the promised timeframe."</p>
-                        <p class="font-black text-[10px] uppercase tracking-widest text-black">— Priya Srivastava, Rajendra Nagar</p>
+                    <div class="bg-slate-50 p-6 md:p-8 rounded-[1.5rem] md:rounded-3xl border border-slate-100 italic" data-aos="fade-up" data-aos-delay="200">
+                        <p class="text-xs md:text-sm text-gray-600 mb-4 leading-relaxed italic">"Subsidy was credited exactly as projected within the promised timeframe."</p>
+                        <p class="font-black text-[9px] uppercase tracking-widest text-black">— Priya Srivastava, Rajendra Nagar</p>
                     </div>
-                    <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100 shadow-sm hover:border-brand-red transition" data-aos="fade-up" data-aos-delay="300">
-                        <p class="text-sm text-gray-600 mb-6 font-medium leading-relaxed italic">"Reliable and experienced team. Power Solarwaves brings a corporate level of project management to rooftop solar in Bareilly."</p>
-                        <p class="font-black text-[10px] uppercase tracking-widest text-black">— Dr. Verma, Pilibhit Bypass</p>
+                    <div class="bg-slate-50 p-6 md:p-8 rounded-[1.5rem] md:rounded-3xl border border-slate-100 italic" data-aos="fade-up" data-aos-delay="300">
+                        <p class="text-xs md:text-sm text-gray-600 mb-4 leading-relaxed italic">"Corporate level project management for rooftop solar in Bareilly."</p>
+                        <p class="font-black text-[9px] uppercase tracking-widest text-black">— Dr. Verma, Pilibhit Bypass</p>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
 
     <!-- Operational FAQ -->
-    <section class="py-24 px-6 bg-slate-50">
+    <section class="py-16 md:py-24 px-4 bg-slate-50">
         <div class="max-w-3xl mx-auto">
-            <h2 class="text-center text-4xl font-black mb-16 italic uppercase tracking-tighter">Operational <span class="text-brand-red">FAQs</span></h2>
+            <h2 class="text-center text-3xl font-black mb-12 italic uppercase tracking-tighter">Operational <span class="text-brand-red">FAQs</span></h2>
             <div class="space-y-4">
                 <details class="bg-white p-6 rounded-2xl border border-gray-100 cursor-pointer group shadow-sm">
-                    <summary class="font-bold text-[10px] uppercase tracking-[0.2em] text-black flex justify-between items-center list-none italic">
-                        Subsidy Disbursement Timeline
+                    <summary class="font-bold text-[9px] uppercase tracking-[0.2em] text-black flex justify-between items-center list-none italic">
+                        Subsidy Timeline
                         <i class="fas fa-chevron-down text-brand-red group-open:rotate-180 transition text-xs"></i>
                     </summary>
-                    <p class="text-sm text-gray-500 mt-4 leading-relaxed font-light">The combined subsidy (Central + UP State) is disbursed directly to the Aadhaar-linked bank account within 30-45 days post-commissioning and net-meter verification.</p>
+                    <p class="text-xs md:text-sm text-gray-500 mt-4 leading-relaxed">Combined subsidy (Central + State) is disbursed to the Aadhaar-linked account within 30-45 days post-commissioning.</p>
                 </details>
                 <details class="bg-white p-6 rounded-2xl border border-gray-100 cursor-pointer group shadow-sm">
-                    <summary class="font-bold text-[10px] uppercase tracking-[0.2em] text-black flex justify-between items-center list-none italic">
-                        Module Performance Warranty
+                    <summary class="font-bold text-[9px] uppercase tracking-[0.2em] text-black flex justify-between items-center list-none italic">
+                        Warranty Protocols
                         <i class="fas fa-chevron-down text-brand-red group-open:rotate-180 transition text-xs"></i>
                     </summary>
-                    <p class="text-sm text-gray-500 mt-4 leading-relaxed font-light">Tier-1 modules (Mono PERC/TopCon) carry a 10-12 year manufacturing warranty and a 25-30 year linear performance warranty, guaranteeing at least 80% output at year 25.</p>
+                    <p class="text-xs md:text-sm text-gray-500 mt-4 leading-relaxed">Tier-1 modules carry a 25-30 year linear performance warranty, guaranteeing at least 80% output at year 25.</p>
                 </details>
             </div>
         </div>
     </section>
 
-    <!-- Contact -->
-    <section id="contact" class="bg-white py-32 px-6">
-        <div class="max-w-7xl mx-auto rounded-[4rem] bg-black text-white overflow-hidden shadow-2xl grid lg:grid-cols-2" data-aos="fade-up">
-            <div class="p-16 lg:p-24 flex flex-col justify-center">
-                <h2 class="text-5xl font-black italic mb-10 tracking-tighter uppercase leading-none">Technical <br><span class="text-brand-red underline decoration-4 underline-offset-8 uppercase tracking-tighter">Consultation.</span></h2>
-                <div class="space-y-10">
+    <!-- Contact Section -->
+    <section id="contact" class="bg-white py-16 md:py-32 px-4 md:px-6">
+        <div class="max-w-7xl mx-auto rounded-[2rem] md:rounded-[4rem] bg-black text-white overflow-hidden shadow-2xl grid grid-cols-1 lg:grid-cols-2" data-aos="fade-up">
+            <div class="p-8 md:p-16 lg:p-24 flex flex-col justify-center">
+                <h2 class="text-4xl md:text-5xl font-black italic mb-8 md:mb-10 tracking-tighter uppercase leading-none">Consult <br><span class="text-brand-red underline decoration-2 md:decoration-4 underline-offset-4 md:underline-offset-8">Technical.</span></h2>
+                <div class="space-y-8 md:space-y-10">
                     <div>
-                        <p class="text-[10px] font-black text-brand-red uppercase tracking-widest mb-2 italic tracking-[0.2em]">Regional Headquarters</p>
-                        <p class="text-xl font-bold italic opacity-80 leading-relaxed">Opp. DAV College, Civil Lines,<br>Bareilly, Uttar Pradesh — 243001</p>
+                        <p class="text-[8px] md:text-[9px] font-black text-brand-red uppercase tracking-widest mb-1 italic">Headquarters</p>
+                        <p class="text-lg md:text-xl font-bold italic opacity-80 leading-relaxed">Opp. DAV College, Civil Lines,<br>Bareilly, Uttar Pradesh — 243001</p>
                     </div>
                     <div>
-                        <p class="text-[10px] font-black text-brand-red uppercase tracking-widest mb-2 italic tracking-[0.2em]">Engineering Hotline</p>
-                        <p class="text-3xl font-black tracking-tighter uppercase">+91 8006600800</p>
+                        <p class="text-[8px] md:text-[9px] font-black text-brand-red uppercase tracking-widest mb-1 italic">Hotline</p>
+                        <p class="text-2xl md:text-3xl font-black tracking-tighter uppercase">+91 8006600800</p>
                     </div>
-                    <div class="flex gap-4 pt-6">
-                        <a href="https://wa.me/918006600800" class="flex-1 bg-green-500 text-white py-5 rounded-2xl flex items-center justify-center font-black text-xs hover:scale-105 transition italic uppercase tracking-widest">WhatsApp</a>
-                        <a href="https://maps.app.goo.gl/BjMt1b5Gx2sFMK3Y8" class="flex-1 bg-white text-black py-5 rounded-2xl flex items-center justify-center font-black text-xs hover:scale-105 transition italic uppercase tracking-widest">Store Map</a>
+                    <div class="flex gap-4 pt-4 md:pt-6">
+                        <a href="https://wa.me/918006600800" class="flex-1 bg-green-500 text-white py-4 md:py-5 rounded-xl md:rounded-2xl flex items-center justify-center font-black text-[10px] uppercase italic tracking-widest">WhatsApp</a>
+                        <a href="https://maps.app.goo.gl/BjMt1b5Gx2sFMK3Y8" class="flex-1 bg-white text-black py-4 md:py-5 rounded-xl md:rounded-2xl flex items-center justify-center font-black text-[10px] uppercase italic tracking-widest">Directions</a>
                     </div>
                 </div>
             </div>
-            <div class="h-full min-h-[500px] grayscale brightness-75 contrast-125">
+            <div class="h-[300px] md:h-full min-h-[300px] md:min-h-[500px] grayscale brightness-75 contrast-125">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3511.4556!2d79.4121!3d28.36!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390a074066050511%3A0xe7819ba8868f69e!2sPower%20Enterprises!5e0!3m2!1sen!2sin!4v1715000000000" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="py-12 text-center border-t border-gray-50 bg-white">
-        <p class="text-[8px] font-black text-gray-300 uppercase tracking-[0.5em]">Power Solarwaves Bareilly • Legacy House of Power Batteries • Established 2002</p>
+    <!-- Simplified Footer -->
+    <footer class="py-10 text-center border-t border-gray-50 bg-white">
+        <p class="text-[7px] md:text-[8px] font-black text-gray-300 uppercase tracking-[0.4em]">Power Solarwaves Bareilly • Legacy House of Power Batteries • Since 2002</p>
     </footer>
 
     <script>
