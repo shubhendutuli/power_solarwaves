@@ -28,4 +28,213 @@
 
     <!-- Premium Navbar -->
     <nav class="fixed w-full z-[100] glass border-b border-white/20">
-        <div class="max-w-7xl
+        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+            <div class="flex flex-col">
+                <span class="text-2xl font-extrabold tracking-tighter text-blue-900 leading-none text-left">POWER GROUP</span>
+                <span class="text-[9px] font-black text-blue-500 tracking-[0.4em] uppercase mt-1 text-left">Bareilly • Est. 2002</span>
+            </div>
+            <div class="hidden lg:flex space-x-10 text-[13px] font-bold uppercase tracking-widest text-slate-600">
+                <a href="#solar" class="hover:text-blue-600 transition">Solarwaves</a>
+                <a href="#battery" class="hover:text-blue-600 transition">Enterprises</a>
+                <a href="#portfolio" class="hover:text-blue-600 transition">Projects</a>
+                <a href="#finance" class="text-orange-600 hover:text-orange-700 transition">Finance</a>
+            </div>
+            <a href="https://wa.me/918006600800" class="bg-blue-600 text-white px-6 py-2.5 rounded-full text-sm font-bold shadow-lg shadow-blue-200 hover:bg-blue-700 transition btn-shine">
+                Get Quote
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center pt-20 hero-gradient px-6">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+            <div class="reveal active">
+                <div class="inline-block bg-white border border-blue-100 px-4 py-1.5 rounded-full shadow-sm mb-8 text-left">
+                    <span class="text-blue-600 text-[11px] font-extrabold uppercase tracking-widest">Bareilly's Energy Authority</span>
+                </div>
+                <h1 class="text-6xl lg:text-8xl font-extrabold tracking-tighter text-slate-900 leading-[0.9] mb-8 text-left">
+                    Modern Energy. <br><span class="text-blue-600 italic font-medium">Family Legacy.</span>
+                </h1>
+                <p class="text-lg text-slate-500 max-w-lg mb-10 leading-relaxed text-left">
+                    Under the leadership of <strong>Mr. Rakesh Tuli</strong> & <strong>Mr. Anant Tuli</strong>, we are transitioning Bareilly from traditional power to a sustainable solar future.
+                </p>
+                <div class="flex flex-wrap gap-5 justify-start">
+                    <a href="#solar" class="px-10 py-5 bg-slate-900 text-white rounded-2xl font-bold hover:bg-black transition-all shadow-2xl">Start Solar Journey</a>
+                    <div class="flex -space-x-3 items-center">
+                        <div class="w-12 h-12 rounded-full border-4 border-white bg-slate-200 flex items-center justify-center font-bold text-xs text-slate-700">RT</div>
+                        <div class="w-12 h-12 rounded-full border-4 border-white bg-blue-600 text-white flex items-center justify-center font-bold text-xs">AT</div>
+                        <span class="ml-4 text-xs font-bold text-slate-400 uppercase tracking-widest">The Tuli Leadership</span>
+                    </div>
+                </div>
+            </div>
+            <div class="relative reveal active" style="transition-delay: 0.2s;">
+                <div class="relative z-10 rounded-[3rem] overflow-hidden shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?q=80&w=1000" class="w-full h-[600px] object-cover" alt="Solar Panels">
+                </div>
+                <div class="absolute -bottom-10 -left-10 glass p-8 rounded-3xl border border-white shadow-2xl z-20">
+                    <p class="text-4xl font-black text-blue-600 italic mb-1 text-left">22+</p>
+                    <p class="text-[10px] font-bold text-slate-400 uppercase tracking-[0.2em] text-left">Years of Excellence</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solarwaves -->
+    <section id="solar" class="py-32 px-6 solar-gradient">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center max-w-3xl mx-auto mb-20 reveal">
+                <h2 class="text-sm font-black text-blue-500 uppercase tracking-[0.5em] mb-4">Power Solarwaves</h2>
+                <p class="text-5xl font-extrabold tracking-tighter mb-6">Sunlight to Savings, <br>Handled From Scratch.</p>
+                <p class="text-slate-500">We don't just install panels; we manage your entire government subsidy (PM Surya Ghar Yojana) and paperwork so you don't have to.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-white p-10 rounded-[2.5rem] border border-slate-100 shadow-xl shadow-blue-50/50 reveal">
+                    <div class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center text-blue-600 text-2xl mb-8"><i class="fas fa-fingerprint"></i></div>
+                    <h3 class="text-2xl font-bold mb-4 italic text-left">Bespoke Design</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed text-left">Every roof in Bareilly is different. We custom-engineer structures to withstand winds while maximizing sun intake.</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="bg-blue-600 p-10 rounded-[2.5rem] text-white shadow-xl shadow-blue-200 reveal" style="transition-delay: 0.1s;">
+                    <div class="w-16 h-16 bg-blue-500 rounded-2xl flex items-center justify-center text-white text-2xl mb-8"><i class="fas fa-indian-rupee-sign"></i></div>
+                    <h3 class="text-2xl font-bold mb-4 italic underline decoration-blue-300 text-left">Subsidy Mastery</h3>
+                    <p class="text-blue-50 text-sm leading-relaxed text-left">Save up to <strong>₹78,000</strong> instantly with Govt. subsidies. We manage the portal and technical inspections for you.</p>
+                </div>
+                <!-- Card 3 -->
+                <div id="finance" class="bg-white p-10 rounded-[2.5rem] border border-orange-100 shadow-xl shadow-orange-50 reveal" style="transition-delay: 0.2s;">
+                    <div class="w-16 h-16 bg-orange-50 rounded-2xl flex items-center justify-center text-orange-500 text-2xl mb-8"><i class="fas fa-piggy-bank"></i></div>
+                    <h3 class="text-2xl font-bold mb-4 italic text-orange-600 uppercase text-left">Easy Finance</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed text-left">Low-interest solar loans available via major banks. Pay for your system using the money you save on electricity bills!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-32 px-6 bg-slate-900 text-white overflow-hidden">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col lg:flex-row justify-between items-end mb-20 reveal">
+                <h2 class="text-5xl font-extrabold tracking-tighter text-left">Powering Bareilly,<br><span class="text-blue-500 italic font-medium underline decoration-blue-500/30">One Roof at a Time.</span></h2>
+                <p class="text-slate-400 max-w-sm mt-6 lg:mt-0 text-left">Actual installations within a 15km radius of Civil Lines.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
+                <div class="group relative rounded-[2rem] overflow-hidden project-card reveal">
+                    <img src="https://images.unsplash.com/photo-1594398044700-1481d1293a9a?q=80&w=400" class="w-full h-80 object-cover opacity-60 group-hover:opacity-100 transition">
+                    <div class="absolute bottom-0 p-8">
+                        <p class="text-xs font-black text-blue-400 tracking-widest uppercase mb-2">10kW Residential</p>
+                        <h4 class="text-2xl font-bold">Rajendra Nagar</h4>
+                    </div>
+                </div>
+                <div class="group relative rounded-[2rem] overflow-hidden project-card reveal" style="transition-delay: 0.1s;">
+                    <img src="https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?q=80&w=400" class="w-full h-80 object-cover opacity-60 group-hover:opacity-100 transition">
+                    <div class="absolute bottom-0 p-8">
+                        <p class="text-xs font-black text-blue-400 tracking-widest uppercase mb-2">3kW Subsidy Plan</p>
+                        <h4 class="text-2xl font-bold">Mahanagar</h4>
+                    </div>
+                </div>
+                <div class="group relative rounded-[2rem] overflow-hidden project-card reveal" style="transition-delay: 0.2s;">
+                    <img src="https://images.unsplash.com/photo-1509391366360-fe5bb6583e23?q=80&w=400" class="w-full h-80 object-cover opacity-60 group-hover:opacity-100 transition">
+                    <div class="absolute bottom-0 p-8">
+                        <p class="text-xs font-black text-blue-400 tracking-widest uppercase mb-2">15kW Commercial</p>
+                        <h4 class="text-2xl font-bold">Civil Lines</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Power Enterprises -->
+    <section id="battery" class="py-32 px-6 bg-white">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-center">
+            <div class="reveal">
+                <h2 class="text-sm font-black text-slate-400 uppercase tracking-[0.5em] mb-4 text-left">The Legacy Shop</h2>
+                <h3 class="text-5xl font-extrabold tracking-tighter mb-8 italic text-left">Power Enterprises</h3>
+                <p class="text-lg text-slate-600 mb-10 leading-relaxed italic text-left">"Since 2002, we've been the heart of Bareilly's battery market. Before Solarwaves was born, Power Enterprises was already a household name for reliability."</p>
+                
+                <div class="space-y-6">
+                    <div class="flex items-center p-6 bg-slate-50 rounded-2xl hover:bg-blue-50 transition border border-transparent hover:border-blue-100">
+                        <span class="text-xl font-bold mr-6 text-blue-600">01</span>
+                        <p class="font-bold text-left">Authorized Exide & Amaron Hub</p>
+                    </div>
+                    <div class="flex items-center p-6 bg-slate-50 rounded-2xl hover:bg-blue-50 transition border border-transparent hover:border-blue-100">
+                        <span class="text-xl font-bold mr-6 text-blue-600">02</span>
+                        <p class="font-bold text-left">Inverter Specialist (Luminous/Microtek)</p>
+                    </div>
+                    <div class="flex items-center p-6 bg-slate-50 rounded-2xl hover:bg-blue-50 transition border border-transparent hover:border-blue-100">
+                        <span class="text-xl font-bold mr-6 text-blue-600">03</span>
+                        <p class="font-bold text-left">Automotive & E-Rickshaw Experts</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-slate-100 rounded-[3rem] p-12 reveal">
+                <div class="grid grid-cols-2 gap-8 grayscale hover:grayscale-0 transition duration-700">
+                    <div class="text-center p-4 bg-white rounded-2xl shadow-sm"><p class="font-black italic">EXIDE</p></div>
+                    <div class="text-center p-4 bg-white rounded-2xl shadow-sm"><p class="font-black italic text-green-600">AMARON</p></div>
+                    <div class="text-center p-4 bg-white rounded-2xl shadow-sm"><p class="font-black italic text-blue-600">LUMINOUS</p></div>
+                    <div class="text-center p-4 bg-white rounded-2xl shadow-sm"><p class="font-black italic text-orange-600">MICROTEK</p></div>
+                    <div class="text-center p-4 bg-white rounded-2xl shadow-sm"><p class="font-black italic text-red-600 text-[10px]">INVOPOWER</p></div>
+                    <div class="text-center p-4 bg-white rounded-2xl shadow-sm"><p class="font-black italic text-blue-900">OSAKA</p></div>
+                </div>
+                <div class="mt-12 text-center">
+                    <p class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">Located at</p>
+                    <p class="font-bold text-slate-800">Opp. DAV College, Civil Lines, Bareilly</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-32 px-6 bg-slate-50">
+        <div class="max-w-7xl mx-auto rounded-[3.5rem] bg-white shadow-2xl overflow-hidden border border-slate-100 reveal">
+            <div class="grid lg:grid-cols-2 text-left">
+                <div class="p-16 lg:p-24">
+                    <h2 class="text-4xl font-black mb-10 italic">Let's Connect.</h2>
+                    <div class="space-y-10">
+                        <div>
+                            <p class="text-[10px] font-black text-blue-500 uppercase tracking-widest mb-2">Direct Hotline</p>
+                            <p class="text-2xl font-bold">+91 8006600800</p>
+                            <p class="text-2xl font-bold text-slate-400">+91 7668708823</p>
+                        </div>
+                        <div>
+                            <p class="text-[10px] font-black text-blue-500 uppercase tracking-widest mb-2">Visit the Tulis</p>
+                            <p class="text-xl font-bold leading-snug">Civil Lines, Opp. DAV College,<br>Bareilly, Uttar Pradesh</p>
+                        </div>
+                        <div class="flex gap-4">
+                            <a href="https://wa.me/918006600800" class="w-14 h-14 bg-green-500 text-white rounded-2xl flex items-center justify-center text-2xl shadow-xl shadow-green-100 hover:scale-110 transition"><i class="fab fa-whatsapp"></i></a>
+                            <a href="https://instagram.com/power_solarwaves" class="w-14 h-14 bg-slate-900 text-white rounded-2xl flex items-center justify-center text-2xl shadow-xl shadow-slate-200 hover:scale-110 transition"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="min-h-[400px]">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3511.4556!2d79.4121!3d28.36!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390a074066050511%3A0xe7819ba8868f69e!2sPower%20Enterprises!5e0!3m2!1sen!2sin!4v1715000000000" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 text-center border-t border-slate-100">
+        <p class="text-[10px] font-black text-slate-300 uppercase tracking-[0.5em]">Power Group Bareilly • Rakesh Tuli & Anant Tuli • Sustainable Innovation</p>
+    </footer>
+
+    <!-- Reveal Script -->
+    <script>
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 150;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", reveal);
+        reveal();
+    </script>
+
+</body>
+</html>
