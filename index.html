@@ -3,266 +3,290 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Power Enterprises Bareilly | Solarwaves & Batteries</title>
+    <title>Power Enterprises | Solarwaves & Batteries Bareilly</title>
+    
+    <!-- Fonts & Icons -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <style>
-        body { font-family: 'Plus Jakarta Sans', sans-serif; scroll-behavior: smooth; }
-        :root { --brand-red: #e11d48; }
-        .text-brand-red { color: var(--brand-red); }
+        :root { --brand-red: #cc0000; --dark: #111111; }
+        body { font-family: 'Outfit', sans-serif; overflow-x: hidden; background-color: #fcfcfc; }
+        h1, h2, h3, .font-heading { font-family: 'Montserrat', sans-serif; text-transform: uppercase; letter-spacing: -1px; }
+        
         .bg-brand-red { background-color: var(--brand-red); }
-        .border-brand-red { border-color: var(--brand-red); }
-        .glass { background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(12px); }
-        .hero-gradient { background: linear-gradient(135deg, #fff5f5 0%, #ffffff 100%); }
-        .reveal { opacity: 0; transform: translateY(20px); transition: 0.6s all ease-out; }
-        .reveal.active { opacity: 1; transform: translateY(0); }
+        .text-brand-red { color: var(--brand-red); }
+        
+        /* Interactive Card Hover */
+        .hover-card { transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+        .hover-card:hover { transform: translateY(-12px) scale(1.02); box-shadow: 0 25px 50px -12px rgba(204, 0, 0, 0.15); }
+        
+        /* Gradient Backgrounds */
+        .hero-mesh { background: radial-gradient(at 0% 0%, rgba(204,0,0,0.05) 0, transparent 50%), radial-gradient(at 100% 100%, rgba(0,0,0,0.02) 0, transparent 50%); }
+        .nav-blur { backdrop-filter: blur(15px); background: rgba(255, 255, 255, 0.8); }
+        
+        /* Calculator Slider Styling */
+        input[type=range] { accent-color: var(--brand-red); }
     </style>
 </head>
-<body class="bg-white text-slate-900">
+<body>
 
-    <!-- Top Urgent Bar -->
-    <div class="bg-brand-red text-white py-2.5 text-center text-xs font-bold px-4 tracking-widest">
-        BIJLI KA BILL ZERO KAREN! SUBSIDY UPTO ₹1,08,000 — CALL: +91 8006600800
+    <!-- Announcement Bar -->
+    <div class="bg-black text-white py-2 text-center text-[10px] font-bold tracking-[0.3em] uppercase px-4">
+        ⚡ Bareilly's #1 Solar & Battery Authority — Established 2002 ⚡
     </div>
 
     <!-- Navigation -->
-    <nav class="sticky top-0 z-[100] glass border-b border-slate-100">
+    <nav class="sticky top-0 z-[100] nav-blur border-b border-gray-100">
         <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
             <div class="flex flex-col">
-                <span class="text-2xl font-black tracking-tighter text-slate-900 leading-none">POWER <span class="text-brand-red">ENTERPRISES</span></span>
-                <span class="text-[9px] font-black text-slate-400 tracking-[0.3em] uppercase mt-1">Bareilly • Since 2002</span>
+                <span class="text-2xl font-black text-black leading-none">POWER <span class="text-brand-red">ENTERPRISES</span></span>
+                <span class="text-[9px] font-bold text-gray-400 tracking-[0.4em] uppercase mt-1">Tuli Family Legacy</span>
             </div>
-            <div class="hidden lg:flex space-x-8 text-[12px] font-bold uppercase tracking-widest">
+            <div class="hidden lg:flex space-x-8 text-xs font-bold uppercase tracking-widest text-gray-600">
                 <a href="#solar" class="hover:text-brand-red transition">Solarwaves</a>
                 <a href="#battery" class="hover:text-brand-red transition">Batteries</a>
-                <a href="#subsidy" class="hover:text-brand-red transition">Subsidy Guide</a>
-                <a href="#finance" class="hover:text-brand-red transition">Finance</a>
-                <a href="#faq" class="hover:text-brand-red transition">FAQ</a>
+                <a href="#calculator" class="hover:text-brand-red transition">Savings Calc</a>
+                <a href="#about" class="hover:text-brand-red transition">Our Story</a>
             </div>
-            <a href="https://wa.me/918006600800" class="bg-brand-red text-white px-6 py-2.5 rounded-full text-xs font-black shadow-lg shadow-rose-200 hover:scale-105 transition">GET FREE QUOTE</a>
+            <a href="https://wa.me/918006600800" class="bg-brand-red text-white px-7 py-3 rounded-full text-xs font-black shadow-xl hover:bg-black transition-all">GET QUOTE</a>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero-gradient pt-16 pb-24 px-6 overflow-hidden">
+    <section class="relative min-h-[90vh] flex items-center px-6 hero-mesh">
         <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
-            <div class="reveal active">
-                <h2 class="text-brand-red font-bold uppercase tracking-[0.3em] text-xs mb-4">Bareilly's Solar Authority</h2>
-                <h1 class="text-5xl lg:text-7xl font-black text-slate-900 leading-tight mb-6 uppercase tracking-tighter">
-                    Ab Bijli Ka Bill <br><span class="text-brand-red">Hoga Zero.</span>
+            <div data-aos="fade-right">
+                <span class="inline-block bg-red-100 text-brand-red px-4 py-1 rounded-full text-[10px] font-black uppercase mb-6">Government Approved Vendor</span>
+                <h1 class="text-6xl lg:text-8xl font-black text-black leading-[0.9] mb-8">
+                    ZERO BILLS. <br><span class="text-brand-red underline decoration-8 decoration-gray-100 underline-offset-8">MAX POWER.</span>
                 </h1>
-                <p class="text-lg text-slate-600 mb-10 leading-relaxed italic">
-                    Get up to <strong>₹1,08,000 Subsidy</strong> under PM Surya Ghar Yojana. 
-                    From site survey to net-metering & bank finance—Mr. Rakesh & Anant Tuli handle everything from scratch.
+                <p class="text-lg text-gray-500 mb-10 max-w-md font-light leading-relaxed">
+                    Under the leadership of <strong>Mr. Rakesh & Anant Tuli</strong>, we bring Bareilly the future of energy. 
+                    Get up to <strong>₹1,08,000 Subsidy</strong> and lifetime support.
                 </p>
-                <div class="flex flex-wrap gap-4">
-                    <a href="#subsidy" class="bg-brand-red text-white px-10 py-5 rounded-2xl font-black shadow-2xl hover:bg-slate-900 transition uppercase tracking-widest">Start Now</a>
-                    <a href="#battery" class="bg-white border-2 border-slate-200 px-10 py-5 rounded-2xl font-black hover:border-brand-red transition uppercase tracking-widest text-slate-400">Battery Shop</a>
+                <div class="flex flex-wrap gap-5">
+                    <a href="#calculator" class="bg-brand-red text-white px-10 py-5 rounded-2xl font-black text-sm uppercase tracking-widest hover:bg-black transition-all shadow-2xl">Start Saving</a>
+                    <a href="#battery" class="bg-white border-2 border-gray-200 px-10 py-5 rounded-2xl font-black text-sm uppercase tracking-widest hover:border-brand-red transition-all">View Shop</a>
                 </div>
             </div>
-            <div class="relative reveal active">
-                <!-- Using your project photo of the 4 people celebrating -->
-                <img src="https://i.ibb.co/3Wf4MvR/celebration-solar.png" class="rounded-[3rem] shadow-2xl border-8 border-white" alt="Power Enterprises Solar Project">
-                <div class="absolute -bottom-6 -right-6 bg-brand-red text-white p-8 rounded-3xl shadow-2xl">
-                    <p class="text-xs font-bold uppercase mb-1">Max Subsidy</p>
-                    <p class="text-4xl font-black italic">₹1,08,000</p>
+            <div class="relative" data-aos="zoom-in" data-aos-delay="200">
+                <!-- PHOTO: CELEBRATION WITH CUSTOMER -->
+                <img src="https://images.unsplash.com/photo-1509391366360-fe5bb6583e23?q=80&w=1200" class="rounded-[3rem] shadow-2xl grayscale hover:grayscale-0 transition duration-700" alt="Solar Installation Bareilly">
+                <div class="absolute -bottom-8 -left-8 bg-white p-10 rounded-[2rem] shadow-2xl border border-gray-50">
+                    <p class="text-5xl font-black text-brand-red italic">₹1.08L</p>
+                    <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mt-2">Maximum Subsidy Claimed</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Solar Brands Wall -->
-    <div class="py-12 bg-white border-y">
-        <div class="max-w-7xl mx-auto px-6 text-center">
-            <p class="text-[10px] font-black text-slate-300 uppercase tracking-[0.5em] mb-10">Authorized Solar Partners</p>
-            <img src="https://i.ibb.co/L5Q78Yv/solar-brands.png" class="mx-auto max-w-full opacity-80 hover:opacity-100 transition duration-500" alt="Solar Brand Partners">
+    <!-- Solar Savings Calculator (Interactivity) -->
+    <section id="calculator" class="py-24 px-6 bg-black text-white overflow-hidden">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-black italic text-brand-red uppercase">Solar Savings Calculator</h2>
+                <p class="text-gray-400 mt-4">Slide to your monthly electricity bill to see your 25-year savings.</p>
+            </div>
+            <div class="bg-zinc-900 p-10 rounded-[3rem] border border-zinc-800 shadow-2xl" data-aos="flip-up">
+                <div class="mb-12">
+                    <div class="flex justify-between font-black text-xs uppercase mb-4 tracking-widest">
+                        <span>Current Monthly Bill</span>
+                        <span class="text-brand-red text-xl">₹ <span id="bill-value">5000</span></span>
+                    </div>
+                    <input type="range" min="1000" max="20000" value="5000" class="w-full h-3 bg-zinc-800 rounded-lg appearance-none cursor-pointer" id="bill-range">
+                </div>
+                <div class="grid md:grid-cols-3 gap-10 text-center border-t border-zinc-800 pt-10">
+                    <div>
+                        <p class="text-[10px] font-black text-gray-500 uppercase tracking-widest mb-2">Recommended System</p>
+                        <p class="text-2xl font-black text-white italic" id="sys-size">3kW</p>
+                    </div>
+                    <div>
+                        <p class="text-[10px] font-black text-gray-500 uppercase tracking-widest mb-2">Estimated Subsidy</p>
+                        <p class="text-2xl font-black text-green-500 italic" id="subsidy-val">₹78,000</p>
+                    </div>
+                    <div>
+                        <p class="text-[10px] font-black text-gray-500 uppercase tracking-widest mb-2">25-Year Savings</p>
+                        <p class="text-4xl font-black text-brand-red italic" id="total-savings">₹12.5L</p>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
 
-    <!-- Subsidy Process (From Scratch) -->
-    <section id="subsidy" class="py-24 px-6 bg-slate-50">
+    <!-- Battery Legacy Section -->
+    <section id="battery" class="py-32 px-6 bg-white">
         <div class="max-w-7xl mx-auto">
-            <div class="grid lg:grid-cols-2 gap-16 items-center">
-                <img src="https://i.ibb.co/m0fD8mR/installation-work.png" class="rounded-[2.5rem] shadow-xl" alt="Work in progress">
-                <div>
-                    <h2 class="text-4xl font-black mb-8 italic uppercase tracking-tighter">Subsidy From <span class="text-brand-red underline">Scratch</span></h2>
-                    <p class="text-slate-600 mb-8 leading-relaxed">Don't worry about the paperwork. Power Enterprises provides a true turn-key solution. Here is how we get your subsidy into your bank account:</p>
-                    <div class="space-y-6">
-                        <div class="flex gap-6">
-                            <span class="w-10 h-10 bg-brand-red text-white flex items-center justify-center rounded-full font-black shrink-0">1</span>
-                            <p class="font-bold">Portal Registration: <span class="text-slate-500 font-normal">We register you on the PM Surya Ghar national portal with your consumer ID.</span></p>
+            <div class="flex flex-col lg:flex-row gap-20 items-center">
+                <div class="lg:w-1/2" data-aos="fade-right">
+                    <h2 class="text-5xl font-black leading-none mb-8 italic text-black">POWER <span class="text-brand-red">BATTERIES</span> CORPORATION</h2>
+                    <p class="text-lg text-gray-500 italic leading-relaxed mb-10 border-l-4 border-brand-red pl-8">
+                        "Since 2002, we've provided Bareilly with high-performance automotive and home backup solutions. From car batteries to heavy industrial setups, we keep you moving."
+                    </p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="p-6 bg-gray-50 rounded-2xl hover:bg-red-50 transition border border-gray-100">
+                            <i class="fas fa-car text-brand-red text-2xl mb-4"></i>
+                            <p class="font-black text-xs uppercase">Car Batteries</p>
                         </div>
-                        <div class="flex gap-6">
-                            <span class="w-10 h-10 bg-brand-red text-white flex items-center justify-center rounded-full font-black shrink-0">2</span>
-                            <p class="font-bold">Feasibility & Approval: <span class="text-slate-500 font-normal">Our team handles the UPPCL technical feasibility survey.</span></p>
+                        <div class="p-6 bg-gray-50 rounded-2xl hover:bg-red-50 transition border border-gray-100">
+                            <i class="fas fa-bolt text-brand-red text-2xl mb-4"></i>
+                            <p class="font-black text-xs uppercase">Home Inverters</p>
                         </div>
-                        <div class="flex gap-6">
-                            <span class="w-10 h-10 bg-brand-red text-white flex items-center justify-center rounded-full font-black shrink-0">3</span>
-                            <p class="font-bold">Net-Metering: <span class="text-slate-500 font-normal">We manage the installation of the smart bi-directional meter.</span></p>
-                        </div>
-                        <div class="flex gap-6">
-                            <span class="w-10 h-10 bg-brand-red text-white flex items-center justify-center rounded-full font-black shrink-0">4</span>
-                            <p class="font-bold">Subsidy Claim: <span class="text-slate-500 font-normal">After commission, we upload all pics & bills. The amount (up to ₹1.08L) is credited to you.</span></p>
-                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-1/2" data-aos="fade-left">
+                    <!-- LOGO WALL: PHOTO OF BATTERY BRAND LOGOS -->
+                    <div class="bg-white p-4 rounded-[2rem] shadow-2xl border border-gray-100">
+                        <img src="https://i.ibb.co/tMM8F9d/battery-brands.png" class="w-full rounded-2xl grayscale" alt="Battery Brands">
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Finance Blog Section -->
-    <section id="finance" class="py-24 px-6 bg-white">
-        <div class="max-w-4xl mx-auto">
-            <div class="p-12 bg-slate-900 text-white rounded-[3rem] shadow-2xl relative overflow-hidden">
-                <div class="absolute top-0 right-0 w-32 h-32 bg-brand-red opacity-20 blur-3xl"></div>
-                <h2 class="text-3xl font-black mb-6 italic uppercase tracking-widest text-brand-red">Solar Finance: Pay with your savings</h2>
-                <p class="text-slate-300 leading-relaxed mb-8">
-                    Why pay high electricity bills when you can pay an EMI? At Power Enterprises, we have tie-ups with <strong>SBI, Canara Bank, and Private NBFCs</strong> to provide Solar Loans for Bareilly residents.
-                </p>
-                <div class="grid md:grid-cols-2 gap-8 text-sm">
-                    <div class="bg-white/5 p-6 rounded-2xl border border-white/10">
-                        <h4 class="font-black text-brand-red mb-2 uppercase">Low ROI</h4>
-                        <p>Get loans starting at 7% to 9% interest rate specifically for PM Surya Ghar Yojana.</p>
-                    </div>
-                    <div class="bg-white/5 p-6 rounded-2xl border border-white/10">
-                        <h4 class="font-black text-brand-red mb-2 uppercase">Zero Downpayment</h4>
-                        <p>Select banks offer 100% funding. Your monthly saving covers the EMI cost.</p>
-                    </div>
-                </div>
-                <a href="https://wa.me/918006600800?text=I-need-solar-finance-details" class="mt-10 inline-block bg-white text-slate-900 px-8 py-4 rounded-xl font-black uppercase text-xs">Calculate My EMI</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Battery Section & Brand Wall -->
-    <section id="battery" class="py-24 px-6 bg-white border-t">
+    <!-- Finance & Subsidy Blog Section (Interactivity) -->
+    <section class="py-24 px-6 bg-slate-50">
         <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-black italic mb-4 uppercase">Power <span class="text-brand-red">Batteries</span> Corporation</h2>
-                <p class="text-slate-500 italic">Trusted since 2002 • Authorized dealer of India's biggest brands</p>
+            <h2 class="text-center text-4xl font-black mb-16 uppercase italic">Full <span class="text-brand-red">Support</span> Strategy</h2>
+            <div class="grid md:grid-cols-2 gap-10">
+                <div class="bg-white p-12 rounded-[3rem] shadow-xl border border-gray-100 hover-card" data-aos="fade-up">
+                    <h3 class="text-2xl font-black mb-6 text-brand-red italic underline">Subsidy From Scratch</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-8">We don't leave you alone with the computer. Mr. Anant Tuli and our dedicated back-office team will register you on the National Portal, handle the UPPCL technical feasibility, and upload all pics for your subsidy claim.</p>
+                    <ul class="text-xs font-bold space-y-4 text-gray-400">
+                        <li><i class="fas fa-check text-green-500 mr-2"></i> National Portal Registration</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i> DISCOM Liasioning</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i> Net Meter Installation</li>
+                    </ul>
+                </div>
+                <div class="bg-black p-12 rounded-[3rem] shadow-xl hover-card text-white" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="text-2xl font-black mb-6 text-brand-red italic underline">Bank Finance</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-8">Go Solar with Zero Downpayment. We have special tie-ups with SBI, Canara Bank, and HDFC for Solar Rooftop Loans. Pay the bank EMI using the money you save on electricity.</p>
+                    <ul class="text-xs font-bold space-y-4 text-gray-600">
+                        <li><i class="fas fa-percentage text-brand-red mr-2"></i> ROI as low as 7.25%</li>
+                        <li><i class="fas fa-calendar text-brand-red mr-2"></i> Tenure up to 10 Years</li>
+                        <li><i class="fas fa-paper-plane text-brand-red mr-2"></i> Minimal Documentation</li>
+                    </ul>
+                </div>
             </div>
-            <!-- Battery Brands Logo Image -->
-            <div class="mb-20 bg-slate-50 p-10 rounded-[3rem] border border-slate-100">
-                <img src="https://i.ibb.co/tMM8F9d/battery-brands.png" class="mx-auto" alt="Authorized Battery Brands">
-            </div>
+        </div>
+    </section>
+
+    <!-- Project Gallery (Real Images) -->
+    <section id="projects" class="py-24 bg-white px-6">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-center text-4xl font-black mb-20 italic">Recent <span class="text-brand-red">Installations</span></h2>
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="p-8 bg-slate-50 rounded-3xl border border-slate-100 hover:border-brand-red transition">
-                    <i class="fas fa-car text-brand-red text-3xl mb-6"></i>
-                    <h4 class="font-bold mb-4 uppercase">Automotive</h4>
-                    <p class="text-sm text-slate-500">Exide & Amaron batteries for all Car/SUV models. Same-day fitment.</p>
+                <div class="rounded-[2.5rem] overflow-hidden shadow-2xl" data-aos="zoom-in">
+                    <!-- PHOTO: TOP VIEW DRONE STYLE -->
+                    <img src="https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?q=80&w=800" class="w-full h-[400px] object-cover hover:scale-110 transition duration-700" alt="Bareilly Solar project">
                 </div>
-                <div class="p-8 bg-slate-50 rounded-3xl border border-slate-100 hover:border-brand-red transition">
-                    <i class="fas fa-charging-station text-brand-red text-3xl mb-6"></i>
-                    <h4 class="font-bold mb-4 uppercase">E-Rickshaw</h4>
-                    <p class="text-sm text-slate-500">High-mileage tubular batteries with 1-year replacement warranty.</p>
+                <div class="rounded-[2.5rem] overflow-hidden shadow-2xl" data-aos="zoom-in" data-aos-delay="100">
+                    <!-- PHOTO: PEOPLE WITH FLOWERS/CELEBRATION -->
+                    <img src="https://images.unsplash.com/photo-1613665813446-82a78c468a1d?q=80&w=800" class="w-full h-[400px] object-cover hover:scale-110 transition duration-700" alt="Happy Customer">
                 </div>
-                <div class="p-8 bg-slate-50 rounded-3xl border border-slate-100 hover:border-brand-red transition">
-                    <i class="fas fa-plug text-brand-red text-3xl mb-6"></i>
-                    <h4 class="font-bold mb-4 uppercase">Home Backup</h4>
-                    <p class="text-sm text-slate-500">Pure Sine-wave Inverters & Stabilizers from Luminous & Microtek.</p>
+                <div class="rounded-[2.5rem] overflow-hidden shadow-2xl" data-aos="zoom-in" data-aos-delay="200">
+                    <!-- PHOTO: STRUCTURE WORK -->
+                    <img src="https://images.unsplash.com/photo-1594398044700-1481d1293a9a?q=80&w=800" class="w-full h-[400px] object-cover hover:scale-110 transition duration-700" alt="Solar Structure">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Project Gallery -->
-    <section class="py-24 px-6 bg-slate-900 text-white">
-        <div class="max-w-7xl mx-auto">
-            <h2 class="text-4xl font-black mb-16 italic text-center uppercase tracking-widest text-brand-red">Live Projects in Bareilly</h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="rounded-3xl overflow-hidden shadow-2xl relative group">
-                    <img src="https://i.ibb.co/hK2GgZf/solar-top-view.png" class="w-full h-80 object-cover group-hover:scale-110 transition duration-500" alt="High roof project">
-                    <div class="absolute bottom-0 p-6 bg-gradient-to-t from-black w-full">
-                        <p class="font-bold italic">15kW High-Rise Plant</p>
-                        <p class="text-xs text-slate-400 font-bold uppercase tracking-widest">Civil Lines</p>
-                    </div>
-                </div>
-                <div class="rounded-3xl overflow-hidden shadow-2xl relative group">
-                    <img src="https://i.ibb.co/q7XwWrv/residential-small.png" class="w-full h-80 object-cover group-hover:scale-110 transition duration-500" alt="Residential project">
-                    <div class="absolute bottom-0 p-6 bg-gradient-to-t from-black w-full">
-                        <p class="font-bold italic">5kW Subsidy Project</p>
-                        <p class="text-xs text-slate-400 font-bold uppercase tracking-widest">Rajendra Nagar</p>
-                    </div>
-                </div>
-                <div class="rounded-3xl overflow-hidden shadow-2xl relative group">
-                    <img src="https://i.ibb.co/V9z0k9J/structure-shot.png" class="w-full h-80 object-cover group-hover:scale-110 transition duration-500" alt="Structure work">
-                    <div class="absolute bottom-0 p-6 bg-gradient-to-t from-black w-full">
-                        <p class="font-bold italic">Bespoke Structure Work</p>
-                        <p class="text-xs text-slate-400 font-bold uppercase tracking-widest">Izzat Nagar</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section id="faq" class="py-24 px-6 bg-white">
-        <div class="max-w-4xl mx-auto">
-            <h2 class="text-4xl font-black italic text-center mb-16 uppercase tracking-tighter">Your Questions, <span class="text-brand-red">Answered.</span></h2>
+    <!-- FAQ Accordion (Interactivity) -->
+    <section id="faq" class="py-24 px-6 bg-slate-50">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-center text-4xl font-black mb-16 italic">FAQS</h2>
             <div class="space-y-4">
-                <div class="border border-slate-100 rounded-2xl p-8 bg-slate-50">
-                    <h4 class="font-bold text-lg mb-4 text-slate-900 uppercase italic tracking-wide">Q: How do I get the ₹1,08,000 subsidy?</h4>
-                    <p class="text-slate-600 text-sm leading-relaxed">It is a combination of Central (₹78,000) and UP State (₹30,000) subsidies. We handle the entire application process on the national portal for you until the money hits your bank account.</p>
-                </div>
-                <div class="border border-slate-100 rounded-2xl p-8 bg-slate-50">
-                    <h4 class="font-bold text-lg mb-4 text-slate-900 uppercase italic tracking-wide">Q: How much space is needed for a 3kW system?</h4>
-                    <p class="text-slate-600 text-sm leading-relaxed">You need approx 250-300 sq. ft of shadow-free rooftop area. We customize the structure based on your roof design.</p>
-                </div>
-                <div class="border border-slate-100 rounded-2xl p-8 bg-slate-50">
-                    <h4 class="font-bold text-lg mb-4 text-slate-900 uppercase italic tracking-wide">Q: Can I run my AC on Solar?</h4>
-                    <p class="text-slate-600 text-sm leading-relaxed">Yes! With a Net-metering system, the solar power produced during the day offsets your AC usage at night, cutting your bill by up to 90%.</p>
-                </div>
+                <details class="bg-white p-6 rounded-2xl border border-gray-100 cursor-pointer group shadow-sm">
+                    <summary class="font-bold text-sm uppercase tracking-widest text-black flex justify-between items-center list-none">
+                        How much space is needed?
+                        <i class="fas fa-chevron-down text-brand-red group-open:rotate-180 transition"></i>
+                    </summary>
+                    <p class="text-sm text-gray-500 mt-4 leading-relaxed">A standard 3kW system requires approximately 250-300 sq. ft. of shadow-free rooftop area.</p>
+                </details>
+                <details class="bg-white p-6 rounded-2xl border border-gray-100 cursor-pointer group shadow-sm">
+                    <summary class="font-bold text-sm uppercase tracking-widest text-black flex justify-between items-center list-none">
+                        How do I receive the ₹1.08L subsidy?
+                        <i class="fas fa-chevron-down text-brand-red group-open:rotate-180 transition"></i>
+                    </summary>
+                    <p class="text-sm text-gray-500 mt-4 leading-relaxed">After installation and net-metering, the claim is verified on the portal. The amount is directly credited to your Aadhaar-linked bank account within 30 days.</p>
+                </details>
+                <details class="bg-white p-6 rounded-2xl border border-gray-100 cursor-pointer group shadow-sm">
+                    <summary class="font-bold text-sm uppercase tracking-widest text-black flex justify-between items-center list-none">
+                        What about cleaning and maintenance?
+                        <i class="fas fa-chevron-down text-brand-red group-open:rotate-180 transition"></i>
+                    </summary>
+                    <p class="text-sm text-gray-500 mt-4 leading-relaxed">Panels should be cleaned with water every 15 days. We provide Annual Maintenance Contracts (AMC) to ensure peak performance year-round.</p>
+                </details>
             </div>
         </div>
     </section>
 
-    <!-- Footer & Contact -->
-    <footer id="contact" class="bg-slate-900 text-white pt-32 pb-12 px-6">
-        <div class="max-w-7xl mx-auto">
-            <div class="grid lg:grid-cols-2 gap-20 pb-20 border-b border-white/10">
-                <div>
-                    <h2 class="text-5xl font-black italic mb-8 uppercase tracking-tighter">Visit Our <br><span class="text-brand-red">Legacy Store.</span></h2>
-                    <div class="space-y-10">
-                        <div>
-                            <p class="text-[10px] font-black text-brand-red uppercase tracking-[0.3em] mb-2">Location</p>
-                            <p class="text-xl font-bold italic">Opposite DAV College, Civil Lines,<br>Bareilly, Uttar Pradesh — 243001</p>
-                        </div>
-                        <div>
-                            <p class="text-[10px] font-black text-brand-red uppercase tracking-[0.3em] mb-2">Hotline</p>
-                            <p class="text-3xl font-black">+91 8006600800</p>
-                            <p class="text-xl font-bold opacity-40">+91 7668708823</p>
-                        </div>
+    <!-- Contact & Maps -->
+    <section id="contact" class="bg-white py-32 px-6">
+        <div class="max-w-7xl mx-auto rounded-[4rem] bg-black text-white overflow-hidden shadow-2xl grid lg:grid-cols-2" data-aos="fade-up">
+            <div class="p-16 lg:p-24 flex flex-col justify-center">
+                <h2 class="text-5xl font-black italic mb-10 tracking-tighter uppercase">Baat Karen <br><span class="text-brand-red underline decoration-4 underline-offset-8">Humse.</span></h2>
+                <div class="space-y-10">
+                    <div>
+                        <p class="text-[10px] font-black text-brand-red uppercase tracking-widest mb-2">Visit Heritage Store</p>
+                        <p class="text-xl font-bold italic">Opp. DAV College, Civil Lines,<br>Bareilly, Uttar Pradesh — 243001</p>
+                    </div>
+                    <div>
+                        <p class="text-[10px] font-black text-brand-red uppercase tracking-widest mb-2">Direct Hotline</p>
+                        <p class="text-3xl font-black tracking-tighter text-white">+91 8006600800</p>
+                        <p class="text-lg font-bold text-gray-600 mt-1 italic">+91 7668708823</p>
+                    </div>
+                    <div class="flex gap-4 pt-6">
+                        <a href="https://wa.me/918006600800" class="flex-1 bg-green-500 text-white py-4 rounded-2xl flex items-center justify-center font-black text-xs hover:scale-105 transition italic uppercase">WhatsApp Us</a>
+                        <a href="https://maps.app.goo.gl/BjMt1b5Gx2sFMK3Y8" class="flex-1 bg-white text-black py-4 rounded-2xl flex items-center justify-center font-black text-xs hover:scale-105 transition italic uppercase">Directions</a>
                     </div>
                 </div>
-                <div class="rounded-[3rem] overflow-hidden border-8 border-white/5 h-[450px]">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3511.4556!2d79.4121!3d28.36!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390a074066050511%3A0xe7819ba8868f69e!2sPower%20Enterprises!5e0!3m2!1sen!2sin!4v1715000000000" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                </div>
             </div>
-            <div class="pt-12 text-center text-[10px] font-bold text-slate-500 uppercase tracking-[0.5em]">
-                © 2024 Power Enterprises | Rakesh Tuli & Anant Tuli | Dedicated to Excellence
+            <div class="h-full min-h-[500px] grayscale contrast-125">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3511.4556!2d79.4121!3d28.36!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390a074066050511%3A0xe7819ba8868f69e!2sPower%20Enterprises!5e0!3m2!1sen!2sin!4v1715000000000" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </div>
+    </section>
+
+    <!-- Simple Footer -->
+    <footer class="py-12 border-t border-gray-100 text-center">
+        <p class="text-[9px] font-black text-gray-300 uppercase tracking-[0.5em]">
+            Power Group Bareilly • Rakesh Tuli & Anant Tuli • Established 2002
+        </p>
     </footer>
 
-    <!-- Fixed WhatsApp -->
-    <a href="https://wa.me/918006600800" class="fixed bottom-6 right-6 bg-green-500 text-white w-16 h-16 rounded-2xl flex items-center justify-center text-3xl shadow-2xl z-50 hover:scale-110 transition">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-
+    <!-- Scripts -->
     <script>
-        function reveal() {
-            var reveals = document.querySelectorAll(".reveal");
-            for (var i = 0; i < reveals.length; i++) {
-                var windowHeight = window.innerHeight;
-                var elementTop = reveals[i].getBoundingClientRect().top;
-                if (elementTop < windowHeight - 100) {
-                    reveals[i].classList.add("active");
-                }
-            }
+        // Initialize Animations
+        AOS.init({ duration: 1000, once: true });
+
+        // Savings Calculator Logic
+        const range = document.getElementById('bill-range');
+        const billVal = document.getElementById('bill-value');
+        const sysSize = document.getElementById('sys-size');
+        const subsidyVal = document.getElementById('subsidy-val');
+        const totalSavings = document.getElementById('total-savings');
+
+        range.oninput = function() {
+            let bill = this.value;
+            billVal.innerText = bill;
+            
+            let size = "3kW";
+            let subsidy = "₹78,000";
+            if(bill < 3000) { size = "1-2kW"; subsidy = "₹30-60k"; }
+            else if(bill > 8000) { size = "5-10kW"; subsidy = "₹78,000"; }
+            
+            sysSize.innerText = size;
+            subsidyVal.innerText = subsidy;
+            totalSavings.innerText = "₹" + ((bill * 12 * 25) / 100000).toFixed(1) + "L";
         }
-        window.addEventListener("scroll", reveal);
-        reveal();
     </script>
+
 </body>
 </html>
